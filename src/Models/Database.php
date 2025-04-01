@@ -3,36 +3,23 @@ namespace App\Models;
 /**
  * This interface represents a database.
  */
-interface Database {
-    /**
-     * Retrieves all records from the database.
-     *
-     * @return array An array of records.
-     */
-    public function getAllRecords();
+class Database {
+    private static $host = "localhost";
+    private static $dbname = "nom_de_ta_bdd";
+    private static $username = "root";
+    private static $password = "";
+    private static $pdo = null;
 
-    /**
-     * Retrieves a specific record from the database.
-     *
-     * @param int $id The ID of the record to retrieve.
-     * @return mixed The retrieved record, null otherwise.
-     */
-    public function getRecord($id);
-
-    /**
-     * Inserts a new record into the database.
-     *
-     * @param mixed $record The record to insert.
-     * @return int The last inserted index if the record was inserted successfully, -1 otherwise.
-     */
-    public function insertRecord($record);
-
-    /**
-     * Updates a specific record in the database.
-     *
-     * @param int $id The ID of the record to update.
-     * @param mixed $record The updated record.
-     * @return bool True if the record was updated successfully, false otherwise.
-     */
-    public function updateRecord($id, $record);
+    public static function getConnection() {
+        if (self::$pdo === null) {
+            try {
+                self::$pdo = new PDO("mysql:host=" . self::$host . ";dbname=" . self::$dbname . ";charset=utf8", self::$username, self::$password);
+                self::$pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+            } catch (PDOException $e) {
+                die("Erreur de connexion : " . $e->getMessage());
+            }
+        }
+        return self::$pdo;
+    }
 }
+?>
