@@ -1,16 +1,15 @@
 <?php 
 namespace App\Controllers;
 
-class TaskController extends Controller {
+class Inscription extends Controller {
 
     public function __construct($templateEngine) {
         $this->templateEngine = $templateEngine;
     }
 
-    // Afficher le footer
-    public function showFooter()
+    public function showIncription()
     {
-        echo $this->templateEngine->render('index.html.twig'); 
+        echo $this->templateEngine->render('Inscription.html.twig'); 
         echo"not working";
     }
 

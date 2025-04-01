@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <link rel="stylesheet" href="static/globals.css" />
-    <link rel="stylesheet" href="static/style.css" />
+    <link rel="stylesheet" href="static/style1.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>StageConnect</title>
   </head>
@@ -16,43 +16,50 @@
       {% include 'navbar.html.twig' %}
       {% include 'header.html.twig' %}
 
-      <!-- Durée de stage -->
-      <div class="BarreDeRecherche2">
-        <label class="text3" for="duree">Durée de Stage</label>
-        <select id="duree" name="duree">
-          <option value="">Choisir</option>
-          <option value="2">2 mois</option>
-          <option value="4">4 mois</option>
-          <option value="6">6 mois</option>
-        </select>
-      </div>
-            
-      <!-- Date de début -->
-      <div class="BarreDeRecherche3">
-        <label class="text4" for="date_debut">Date de Début</label>
-        <select id="date_debut" name="date_debut">
-          <option value="">Choisir</option>
-          <option value="2025-04-07">7 avril 2025</option>
-          <option value="2025-05-01">1er mai 2025</option>
-          <option value="2025-06-01">1er juin 2025</option>
-        </select>
-      </div>
-      
-      <!-- Gratification -->
-      <div class="BarreDeRecherche4">
-        <label class="text5" for="gratification">Gratification</label>
-        <select id="gratification" name="gratification">
-          <option value="">Choisir</option>
-          <option value="non">Non rémunéré</option>
-          <option value="min_400">Rémunéré (min 400€)</option>
-          <option value="min_600">Rémunéré (min 600€)</option>
-        </select>
-      </div>
-      <div class="rectangle10">
-        <img class="buy" src="static/assets/buy.jpg">
-        <h1 class="text7">Bouygues-Télécom</h1>
-        <p class="text8">Administrateur réseau (H/F)</p>
-      </div>
+                <main class="offres">
+                    <p class="text6"><strong>Postes à pouvoir actuellement <span class="special-mot">Trier</span></strong></p>
+                    <img class="traits" src="static/assets/Trois traits.jpg">
+                    <div class="offres-stage1">
+                        <img class="Bouygues-Télécom" src="static/assets/logo-bouygues-telecom.gif">
+                        <a href="bouygues-Télécom.html"><h3 class="text7">Bouygues-Télécom</h3></a>
+                        <h4 class="text8">Administrateur réseau (F/H)</h4>
+                        <div class="rectangle3">
+                            <img  class="localisation1" src="static/assets/logo-localisation.jpg">
+                            <div class="text9">Niort, Charente-Maritime (17)</div>
+                        </div>
+                        <div class="rectangle4">
+                            <img class="niveau1" src="static/assets/Niveau.png">
+                            <div class="text10">Niveau 2( BTS, Cycle Préparatoire)</div>
+                        </div>
+                        <div class="rectangle5">
+                            <div class="tag1">Stage</div>
+                        </div>
+                        <div class="rectangle6">
+                            <div class="duration1">3 - 4 mois</div>
+                        </div>
+                        <a href="index.php?page=voiroffre1"><button class="btn-offer">Voir l'offre</button></a>
+                    </div>
+                    <div class="offres-stage2">
+                        <img class="edf" src="static/assets/logo-edf.jpeg" alt="EDF">
+                        <a href="edf.html"><h3 class="text11">EDF</h3></a>
+                        <h4 class="text12">Développement Full-Stack F/H</h4>
+                        <div class="rectangle7">
+                            <img class="localisation2" src="static/assets/logo-localisation.jpg">
+                            <div class="text13"> La Rochelle, Charente-Maritime (17)</div>
+                        </div>
+                        <div class="rectangle8">
+                            <img class="niveau2" src="static/assets/Niveau.png">
+                            <div class="text14">Niveau 2( BTS, Cycle Préparatoire)</div>
+                        </div>
+                        <div class="rectangle9">
+                            <div class="tag2">Stage</div>
+                        </div>
+                        <div class="rectangle10">
+                            <div class="duration2">3 - 4 mois</div>
+                        </div>
+                        <a href="index.php?page=voiroffre2"><button class="btn-offer">Voir l'offre</button></a>
+                    </div>
+                </main>
 
 
       {% include 'footer.html.twig' %}

@@ -1,13 +1,14 @@
 <?php
 namespace App\Models;
-/**
- * This interface represents a database.
- */
+
+use PDO;
+use PDOException;
+
 class Database {
-    private static $host = "localhost";
-    private static $dbname = "nom_de_ta_bdd";
+    private static $host = "20.160.39.130";
+    private static $dbname = "Projet_DW";
     private static $username = "root";
-    private static $password = "";
+    private static $password = "Pereira0301@";
     private static $pdo = null;
 
     public static function getConnection() {
@@ -22,4 +23,3 @@ class Database {
         return self::$pdo;
     }
 }
-?>

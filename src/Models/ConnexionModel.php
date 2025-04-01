@@ -1,7 +1,7 @@
 <?php
 require_once 'Database.php';
 
-class UtilisateurModel {
+class ConnexionModel {
     private $pdo;
 
     public function __construct() {
